@@ -5,6 +5,9 @@ const app = Vue.createApp(
                 firstGoal:'Html',
                 website:'https://www.google.com',
             }
+        },
+        methods:{
+            
         }
     }
 );
