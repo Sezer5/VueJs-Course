@@ -15,13 +15,15 @@
     </header>
 
     <section id="frontend">
-        <h2>Yol Haritası</h2>
-        <p>Html</p>
-        <p>Css</p>
-        <p>{{firstGoal}}</p>
-        <p>{{ourGoal()}}</p>
-        <p>{{4>3 ? 'HTML':'CSS'}}</p>
-        <a v-bind:href="website">Web Sitem</a>
+        <h2>Bilgilerim</h2>
+        Adınızı ve Yaşınızı Bastırın<br>
+        Unsplash'den Resim Url'i Alıp Bastırın<br>
+        inputta varsayılan isim olarak adınızı bastırınız.
+        <hr>
+        <p>{{isim}}</p>
+        <p>{{yas}}</p>
+        <img v-bind:src="website">
+        <input type="text" v-bind:value="isim">
     </section>
 
     <script src="script.js" defer></script>

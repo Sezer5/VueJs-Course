@@ -16,11 +16,9 @@
 
     <section id="frontend">
         <h2>Yol Haritası</h2>
-        <p>Html</p>
-        <p>Css</p>
-        <p>{{firstGoal}}</p>
+        <p v-html="secondGoal"></p>
+        <p v-html="ourGoal()"></p>
         <p>{{ourGoal()}}</p>
-        <p>{{4>3 ? 'HTML':'CSS'}}</p>
         <a v-bind:href="website">Web Sitem</a>
     </section>
 
