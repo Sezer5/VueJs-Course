@@ -4,12 +4,36 @@ const app = Vue.createApp(
             return {
                 counter:0,
                 name:'',
+                lastName:'',
+                fullName:'',
+            }
+        },
+        watch:{
+            counter(value){
+                if(value>20){
+                    this.counter=0;
+                }
+            },
+            name(value){
+                if(value == ''){
+                    this.fullName='';
+                }else{
+                    this.fullName=value+' '+this.lastName;
+                }
+                
+            },
+            lastName(value){
+                if(value == ''){
+                    this.fullName='';
+                }else{
+                    this.fullName=this.name+' '+value;
+                }
             }
         },
         computed:{
             fullNameComputed(){
                 console.log("Execute edildi");
-                if(this.name == ''){
+                if(this.name == '' || this.lastName == ''){
                     return '';
                 }
                 return this.name+' '+'Ünalmış';
@@ -21,7 +45,7 @@ const app = Vue.createApp(
                 if(this.name == ''){
                     return '';
                 }
-                return this.name+' '+'Ünalmış';
+                return this.name+' '+this.lastName;
             },
             reset(){
                 this.name='';

@@ -21,6 +21,7 @@
         <p v-once>Başlangıç: {{counter}}</p>
         <p>Sonuc: {{counter}}</p>
         <input v-model="name">
+        <input v-model="lastName">
         <!-- type="text" v-on:input="setName($event)" v-bind:value="name" -->
         <button v-on:click="reset">Reset</button>
         <p>Adınız {{fullNameComputed}}</p>
