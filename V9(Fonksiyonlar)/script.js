@@ -7,7 +7,15 @@ const app = Vue.createApp(
             }
         },
         methods:{
-            
+            ourGoal(){
+                const randomNumber=Math.random();
+                if(randomNumber < 0.4){
+                    return this.firstGoal;
+                }else{
+                    return this.secondGoal;
+                }
+                
+            }
         }
     }
 );
