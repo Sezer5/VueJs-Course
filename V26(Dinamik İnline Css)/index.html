@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue Js Temelleri</title>
+    <script src="https://unpkg.com/vue@3.4.9/dist/vue.global.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="">
+</head>
+<body>
+
+    <header>
+        <h2>Dinamik Stillendirme</h2>
+    </header>
+
+    <section id="frontend">
+        
+        <div class="box" :style="{borderColor:firstBox ? 'red':'gray'}" @click="chooseBox('1')"></div>
+        <div class="box" :style="{borderColor:secondBox ? 'red':'gray'}" @click="chooseBox('2')"></div>
+        <div class="box" :style="{borderColor:thirdBox ? 'red':'gray'}" @click="chooseBox('3')"></div>
+    </section>
+    
+
+    <script src="script.js" defer></script>
+</body>
+</html>
