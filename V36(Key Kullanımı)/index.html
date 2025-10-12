@@ -21,7 +21,7 @@
         </div>
         <p v-if="skills.length === 0">Herhangi bir şey eklemediniz</p>
         <ul v-else-if="skills.length > 0">
-            <li v-for="(skill,index) in skills" @click="deleteSkill(index)">{{index}}. Eleman {{skill}}</li>
+            <li v-for="(skill,index) in skills" :key="index" @click="deleteSkill(index)">{{index}}. Eleman {{skill}}</li>
         </ul>
     </section>
     

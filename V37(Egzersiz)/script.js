@@ -2,8 +2,10 @@ const app = Vue.createApp(
     {
         data(){
             return {
-                skill:'',
-                skills:[],
+                enteredTask:'',
+                tasks:[],
+                isVisible:true,
+                
             }
         },
         watch:{
@@ -14,11 +16,11 @@ const app = Vue.createApp(
            
         },
         methods:{
-          addSkill(){
-            this.skills.push(this.skill);
+          addTask(){
+            this.tasks.push(this.enteredTask);
           },
-          deleteSkill(index){
-            this.skills.splice(index,1);
+          toggleTasks(){
+            this.isVisible=!this.isVisible;
           }
         }
     }

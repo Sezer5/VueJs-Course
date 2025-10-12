@@ -11,18 +11,19 @@
 <body>
 
     <header>
-        <h2>Dinamik Stillendirme</h2>
+        <h2>Yapılacaklar Listesi</h2>
     </header>
 
     <section id="frontend">
        <div class="frontendForm">
-            <input type="text" v-model="skill">
-            <button @click="addSkill()">Ekle</button>
+            <input type="text" v-model="enteredTask">
+            <button @click="addTask()">Ekle</button>
+            
         </div>
-        <p v-if="skills.length === 0">Herhangi bir şey eklemediniz</p>
-        <ul v-else-if="skills.length > 0">
-            <li v-for="(skill,index) in skills" @click="deleteSkill(index)">{{index}}. Eleman {{skill}}</li>
+        <ul v-if="isVisible">
+            <li v-for="(items, index) in tasks" :key="index">{{items}}</li>
         </ul>
+        <button @click="toggleTasks()">{{isVisible ? 'Gizle' : 'Göster'}}</button>
     </section>
     
 
